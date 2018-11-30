@@ -2,8 +2,8 @@
 ## 项目简介
 该项目用于分布式及高并发下 基于Redis及注解实现相关功能；  
 1.注解缓存  
-2.分布式锁  
-3.分布式限流（基于 google guava 非分布式，redis 分布式） 两种模式  
+2.注解分布式锁  
+3.注解分布式限流（基于 google guava 非分布式，redis 分布式） 两种模式  
 ## 使用
 application.properties  
 ```
