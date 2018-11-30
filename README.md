@@ -41,7 +41,7 @@ public String getUser1FallBack(){
 }
 ```
 
-##缓存
+## 缓存
 1.设置缓存  
 ```
 @Cache(keys ={"USER:getSpelById","#userId"},expire = 1200)
@@ -85,7 +85,7 @@ public int delUserById(int userId) {
 }
 ```
 
-##分布式锁
+## 分布式锁
 ```
 @ELock(keys = {"and","#userId"},waitTime = 6000L,leaseTime = 6000L,lockType = LockType.Reentrant)
 public UserDO getUserById(int userId) {
