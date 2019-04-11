@@ -113,7 +113,7 @@ public class CacheHandler {
      * 异步操作刷新缓存 增加分布式锁，需要@EnableEasyLock 开启锁，否则分布式锁不生效
      * @param cacheTask
      */
-    @ELock(keys = {"#cacheTask.key"},lockType = LockType.Reentrant)
+    @ELock(keys = {"#cacheTask.key"},lockType = LockType.Reentrant,waitTime = 1000L)
     private void lockCacheTask(CacheTask cacheTask){
         CacheConfig.getAddCacheThreadPool().execute(cacheTask);
     }
